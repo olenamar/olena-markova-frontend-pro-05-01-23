@@ -19,7 +19,7 @@ console.group('Знайти мінімальний елемент масиву �
 let min = array[0];
 for(let i = 0; i < array.length; i++) {
     const itemMin = array[i];
-    if (min > itemMin) {
+    if(min > itemMin) {
         min = itemMin;
     }
 }
@@ -41,7 +41,7 @@ console.groupEnd();
 console.group('Визначити кількість негативних елементів.')
 
 let negative = 0;
-for(let i = 0; i < array.length; i++){
+for(let i = 0; i < array.length; i++) {
     const item = array[i];
     if(item < 0) {
         negative++;
@@ -56,7 +56,7 @@ let multi = 1;
 for(let i = 0; i < array.length; i++) {
     const item = array[i];
     if(item > 0) {
-       multi = multi * item;
+        multi = multi * item;
     }
 }
 console.log(multi);
