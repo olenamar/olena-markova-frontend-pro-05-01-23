@@ -17,10 +17,10 @@ console.groupEnd();
 console.group('Знайти мінімальний елемент масиву та його порядковий номер.')
 
 let min = array[0];
-for(let j = 1; j < array.length; j++) {
-    const itemMin = array[j];
-    if (min < 0 && array[itemMin] < min) {
-        min = array[itemMin];
+for(let i = 0; i < array.length; i++) {
+    const itemMin = array[i];
+    if (min > itemMin) {
+        min = itemMin;
     }
 }
 console.log(min, array.indexOf(min));
@@ -29,10 +29,10 @@ console.groupEnd();
 console.group('Знайти максимальний елемент масиву та його порядковий номер.')
 
 let max = array[0];
-for(let z = 1; z < array.length; z++) {
-    const itemMax = array[z];
-    if(array[itemMax] > max) {
-        max = array[itemMax];
+for(let i = 0; i < array.length; i++) {
+    const itemMax = array[i];
+    if(max < itemMax) {
+        max = itemMax;
     }
 }
 console.log(max, array.indexOf(max));
@@ -41,8 +41,8 @@ console.groupEnd();
 console.group('Визначити кількість негативних елементів.')
 
 let negative = 0;
-for(let n = 0; n < array.length; n++){
-    const item = array[n];
+for(let i = 0; i < array.length; i++){
+    const item = array[i];
     if(item < 0) {
         negative++;
     }
@@ -53,8 +53,8 @@ console.groupEnd();
 console.group('Знайти добуток позитивних елементів.')
 
 let multi = 1;
-for(let m = 0; m < array.length; m++) {
-    const item = array[m];
+for(let i = 0; i < array.length; i++) {
+    const item = array[i];
     if(item > 0) {
        multi = multi * item;
     }
